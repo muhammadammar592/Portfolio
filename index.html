@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+    <link rel="stylesheet" href="style1.css">
+<!--UNICON ICONS-->
+<link rel="stylesheet"  href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+    <header class="header">
+<a href="#" class="logo">Portfolio</a>
+<nav class="navbar">
+    <a href="#" class="active" style="--i:1" onclick="showHome()">Home</a>
+    <a href="#" style="--i:2" onclick="showAbout()">About</a>
+    <a href="#" style="--i:3" onclick="showSkills()">Skills</a>
+    <a href="#" style="--i:4" onclick="showPortfolio()">Portfolio</a>
+    <a href="#" style="--i:5" onclick="showContact()">Contact</a>
+</nav>
+    </header>
+    <!--Hero Section-->
+    <div class="hero-container">
+        <div class="info-side">
+        <h3 class="part-1">Hello, It's Me</h3>
+        <h1>Muhammad Ammar</h1>
+        <h3 class="part-2">And I am <span>FrontEnd Expert</span></h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptatem! 
+        </p>
+    <a href="https://www.facebook.com/ammar.qureshi.1238?mibextid=ZbWKwL"><i class="uil uil-facebook-f" style="--i: 7"></i></a>
+    <a href="https://x.com/MohammadAmmarQ3?t=4WEQtiOLfLNXPHYa4yvGlg&s=09"><i class= "uil uil-twitter" style="--i: 8"></i></a>
+    <a href="https://instagram.com/muhammadammarq278?igshid=MTZrMTNqeHY0bmM0OA=="><i class="uil uil-instagram" style="--i: 9"></i></a>
+    <a href="#"><i class="uil uil-linkedin" style="--i: 10"></i></a>
+    <button class="btn">Download CV</button>
+</div>
+<div class=" hero-image">
+    <img src="ammar1.jpeg" alt="My Pic" width="200" height="250" style="border: 5px; border-radius: 30px;">
+</div>
+</div>
+<div class="about-section" id="about">
+    <h1>About Me</h1>
+    <br>
+    <h2>Experience</h2>
+    <h4>2+Years</h4>
+    <h2>Education</h2>
+    <h4>Bachelors In Computer Systems</h4>
+    <p id="centered-paragraph" contenteditable="true">I'm a computer systems engineering graduate with a passion for web development.
+        Expert In HTML and CSS. Moving Forward to become an Full Stack Developer. To create human reliable websites.  </p>
+</div>
+<div class="skills-section" id="skills">
+    <h1>Skills</h1>
+    <h4>Html: Experienced</h4>
+    <h4>CSS: Experienced</h4>
+    <h4>Javascript: Intermediate</h4>
+    <h4>NodeJS: Basic</h4>
+    <h4>TypeUI: Intermediate</h4>
+</div>
+<br>
+<div class="portfolio-section" id="portfolio">
+    <!-- Your portfolio content goes here -->
+    <h1>Projects</h1>
+    <img src="pr1.webp" alt="" width="600" style="border: 2px solid #000; border-radius: 20px;" >
+    <br>
+    <br>
+    <img src="pr2.jpg" alt="" width="600" height="337" style="border: 2px solid #000; border-radius: 20px;">
+</div>
+<div class="contact-section" id="contact">
+    <h1>Contact Me</h1>
+    <h4>Email</h4>
+    <a href="mailto:ammarqureshi278@gmail.com">ammarqureshi278@gmail.com</a>
+</div>
+
+<script>
+
+    function showSkills() {
+        // Get references to all sections
+        const homeSection = document.querySelector('.hero-container');
+        const aboutSection = document.querySelector('.about-section');
+        const skillsSection = document.querySelector('.skills-section');
+        const contactSection = document.querySelector('.contact-section');
+        const portfoliosection = document.querySelector('.portfolio-section');
+    
+        // Hide all sections except the "Skills" section
+        homeSection.style.display = 'none';
+        aboutSection.style.display = 'none';
+        skillsSection.style.display = 'block';
+        contactSection.style.display = 'none';
+        portfoliosection.style.display = 'none';
+    }
+    
+
+function showAbout() {
+    // Get references to all sections
+    const homeSection = document.querySelector('.hero-container');
+    const aboutSection = document.querySelector('.about-section');
+    const skillsSection = document.querySelector('.skills-section');
+    const contactSection = document.querySelector('.contact-section');
+    const portfoliosection = document.querySelector('.portfolio-section');
+
+    // Hide all sections except the "About" section
+    homeSection.style.display = 'none';
+    aboutSection.style.display = 'block';
+    skillsSection.style.display = 'none';
+    contactSection.style.display = 'none';
+    portfoliosection.style.display = 'none';
+}
+
+function showContact() {
+    // Get references to the sections
+    const homeSection = document.querySelector('.hero-container');
+    const aboutSection = document.querySelector('.about-section');
+    const skillsSection = document.querySelector('.skills-section');
+    const contactSection = document.querySelector('.contact-section');
+    const portfoliosection = document.querySelector('.portfolio-section');
+    // Hide the home, about, and skills sections, and show the contact section
+    homeSection.style.display = 'none';
+    if (aboutSection) {
+        aboutSection.style.display = 'none';
+    }
+    if (skillsSection) {
+        skillsSection.style.display = 'none';
+    }
+    if (portfoliosection) {
+        portfoliosection.style.display = 'none';
+    }
+    contactSection.style.display = 'block';
+}
+function showPortfolio() {
+    // Get references to all sections
+    const homeSection = document.querySelector('.hero-container');
+    const aboutSection = document.querySelector('.about-section');
+    const skillsSection = document.querySelector('.skills-section');
+    const contactSection = document.querySelector('.contact-section');
+    const portfolioSection = document.querySelector('.portfolio-section');
+
+    // Hide all sections except the "Portfolio" section
+    homeSection.style.display = 'none';
+    aboutSection.style.display = 'none';
+    skillsSection.style.display = 'none';
+    contactSection.style.display = 'none';
+    portfolioSection.style.display = 'block';
+}
+
+function showHome() {
+    // Get references to all sections
+    const homeSection = document.querySelector('.hero-container');
+    const aboutSection = document.querySelector('.about-section');
+    const skillsSection = document.querySelector('.skills-section');
+    const contactSection = document.querySelector('.contact-section');
+    const portfoliosection = document.querySelector('.portfolio-section');
+    // Reset the visibility of all sections
+    homeSection.style.display = 'block';
+    if (aboutSection) {
+        aboutSection.style.display = 'none';
+    }
+    if (skillsSection) {
+        skillsSection.style.display = 'none';
+    }
+    if (contactSection) {
+        contactSection.style.display = 'none';
+    }
+    if (portfoliosection) {
+        portfoliosection.style.display = 'none';
+    }
+}
+
+    </script>
+    
+</body>
+</html>
